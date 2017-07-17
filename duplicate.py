@@ -1,12 +1,14 @@
+# example: python duplicate.py document1.pdf 0 50 40
+
 from PyPDF2 import PdfFileWriter, PdfFileReader
 import sys, os
 
 mmFactor = 72 / 25.4 # approx 2.8346
 
-infilename = sys.argv[1]
-inithshift = float(sys.argv[2]) * mmFactor
-hshift = float(sys.argv[3]) * mmFactor
-vshift = float(sys.argv[4]) * mmFactor
+infilename = sys.argv[1]    # relaive or absolute path to pdf file to process
+inithshift = float(sys.argv[2]) * mmFactor  # leftmost image left margin
+hshift = float(sys.argv[3]) * mmFactor  # horizontal offset added to each image
+vshift = float(sys.argv[4]) * mmFactor  # vertical margin from bottom
 
 print "infilename: %s, hshift: %f, vshift: %f" % (infilename, hshift, vshift)
 

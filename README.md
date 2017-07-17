@@ -6,9 +6,13 @@ Reads infil and creates a new file containing the contents of infile duplicated 
 
 Output file is named as infilepath with -duplicated before extension.
 
-parameters
+## parameters
 
 infilepath - a pdf file
 inithshift [mm] - horizontal shift, with positive in the right direction
 hshift [mm] - horizontal shift between each duplicated
 vshift [mm] - vertical shift of image top, up from bottom edge - higher value is in the upward direction
+
+## example
+
+python duplicate.py document1.pdf 0 50 40
